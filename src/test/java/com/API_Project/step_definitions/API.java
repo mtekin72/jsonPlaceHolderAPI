@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.*;
 public class API {
     public static String baseURL = "https://jsonplaceholder.typicode.com";
 
-
+@Test
     public void getUserName() {
         //-UserName query(Map format)
         Map<String, Object> queryMap = new HashMap<>();
