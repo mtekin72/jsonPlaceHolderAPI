@@ -1,0 +1,364 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-31T19:52:28.605Z",
+        "line": 4,
+        "name": "Searching posts by title",
+        "description": "",
+        "id": "check-given-title-with-invalid-parameters;searching-posts-by-title",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3960257313,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "send get request with parameter \"baseURL\" and \"/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"baseURL\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"/posts\"",
+                  "offset": 46
+                }
+              ],
+              "location": "Api_Test.send_get_request_with_parameter_and(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 972866425,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I search with the \"Sincere@april.biz\" as a title",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sincere@april.biz\"",
+                  "offset": 18
+                }
+              ],
+              "location": "Api_Test.i_search_with_the_as_a_title(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63322753,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The \"title\" should not not contains the given parameter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 4
+                }
+              ],
+              "location": "Api_Test.the_should_not_not_contains_the_given_parameter(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Check given title with invalid parameters",
+    "description": "",
+    "id": "check-given-title-with-invalid-parameters",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/NegativeTestScenarios.feature",
+    "tags": [
+      {
+        "name": "@Smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-31T19:52:33.731Z",
+        "line": 4,
+        "name": "Verify userName Information",
+        "description": "",
+        "id": "user-verification;verify-username-information",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 236303533,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "send get request with parameter \"username\", \"Delphine\", \"baseURL\" and \"/users\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"username\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"Delphine\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"baseURL\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\"/users\"",
+                  "offset": 70
+                }
+              ],
+              "location": "Api_Test.send_get_request_with_parameter_and(String,String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 56149340,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The status code should be 200 and the information is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Api_Test.the_status_code_should_be_and_the_information_is_correct(Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21256627,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the respond Id Information of the user",
+            "match": {
+              "location": "Api_Test.get_the_respond_Id_Information_of_the_user()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-31T19:52:34.062Z",
+        "line": 9,
+        "name": "Get the valid Id or Ids of the User after get posts request",
+        "description": "",
+        "id": "user-verification;get-the-valid-id-or-ids-of-the-user-after-get-posts-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 178229683,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I have sent the get posts request of API with \"baseURL\" and \"/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"baseURL\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"/posts\"",
+                  "offset": 60
+                }
+              ],
+              "location": "Api_Test.i_have_sent_the_get_posts_request_of_API_with_and(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 191593763,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The status code should be 200 and the posts information is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Api_Test.the_status_code_should_be_and_the_posts_information_is_correct(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16965114,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I entered the query parameter of  \"id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 34
+                }
+              ],
+              "location": "Api_Test.i_entered_the_query_parameter_of(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 654353,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The related posts belong to correct user_Id is listed",
+            "match": {
+              "location": "Api_Test.the_related_posts_belong_to_correct_user_Id_is_listed()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-31T19:52:34.455Z",
+        "line": 15,
+        "name": "Validate the emails",
+        "description": "",
+        "id": "user-verification;validate-the-emails",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 152540312,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I have sent the get comments request of API with \"baseURL\" and \"/comments\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"baseURL\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"/comments\"",
+                  "offset": 63
+                }
+              ],
+              "location": "Api_Test.i_have_sent_the_get_comments_request_of_API_with_and(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 163448392,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The status code should be 200 and comments the information is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Api_Test.the_status_code_should_be_and_comments_the_information_is_correct(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 44778331,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I entered the query parameter of  \"id\" of Comments",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 34
+                }
+              ],
+              "location": "Api_Test.i_entered_the_query_parameter_of_of_Comments(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 167933515,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The email belongs to comments user Id is validated",
+            "match": {
+              "location": "Api_Test.the_email_belongs_to_comments_user_Id_is_validated()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "User Verification",
+    "description": "",
+    "id": "user-verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/jsonPlaceHolderAPI.feature",
+    "tags": [
+      {
+        "name": "@Smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
