@@ -1,15 +1,12 @@
 package com.API_Project.step_definitions;
-
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static io.restassured.RestAssured.*;
 
@@ -18,7 +15,7 @@ public class API {
 
     @Test
     public void getUserName() {
-        //Map format of UserName query
+        //-UserName query(Map format)
         Map<String, Object> queryMap = new HashMap<>();
         queryMap.put("username", "Delphine");
         Response responseUserName = given().accept(ContentType.JSON)
@@ -34,11 +31,9 @@ public class API {
         List<Integer> idList=responseUserName.path("id");
 
 
-        //Map format of Posts query for User Id 9
+        //Map format of Posts query for User Id (Id-9)
         Map<String, Object> queryMap1 = new HashMap<>();
         queryMap1.put("userId", idList.get(0));
-
-
 
         Response responsePosts = given().accept(ContentType.JSON)
                 .and().queryParams(queryMap1).log().all()
