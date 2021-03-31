@@ -3,7 +3,7 @@
 How to install, run and write new test cases
 It can be cloned with Intellij and can be added new scenarios to the feature file. If it is necessary, new steps should be created in particular StepDefs classes. Since Scenario variables are used, the same scenarios can be executed by adding new parameters under Examples:
 
-The project was automated inside the GitLab CI. Once push the new code to the repository, it will be triggered automatically and the test results and the artifacts (cucumber-reports and surefire-reports) are accessible under the GitLab CI/CD Pipelines.
+The project was automated inside the Circle CI Tool. Once push the new code to the repository, it will be triggered automatically and the test results and the artifacts (cucumber-reports and surefire-reports) are accessible under the GitLab CI/CD Pipelines.
 
 You can see the endpoints interactions below;
 
@@ -51,7 +51,7 @@ Id number "9" is retrieved and used for another GET request.
 
 REQUEST
 
-https://jsonplaceholder.typicode.com/posts?userId=9
+GET https://jsonplaceholder.typicode.com/posts?userId=9
 
 RESPONSE
 If the request succeeds, the server responds with the 200 OK
@@ -138,7 +138,7 @@ Each pos id numbers for user 9 retrieved. By using for loop, each request for
 every single post ID requests were made.
 
 REQUEST
-https://jsonplaceholder.typicode.com/comments?id=84
+GET https://jsonplaceholder.typicode.com/comments?id=84
 
 
 
@@ -156,4 +156,9 @@ Status Code: 200 OK
 "body": "ratione ut magni voluptas\nexplicabo "
 }
 ]
+
+
+TESTS
+
+Total 4 Test Scenarios were tested. 3 Positive Senarious and 1 Negative senario.
 
