@@ -110,7 +110,7 @@ public class Api_Test {
     public void the_status_code_should_be_and_the_posts_information_is_correct(int statusCode) {
         queryMap.put("username", "Delphine");
         responseUserName = given().accept(ContentType.JSON)
-                .and().queryParams(queryMap).log().all()
+                .and().queryParams(queryMap)
                 .when().get(ConfigurationReader.get("baseURL") + "/users");
         idList=responseUserName.path("id");
         Assert.assertEquals(responsePosts.statusCode(), statusCode);
@@ -132,7 +132,7 @@ public class Api_Test {
     @Given("I have sent the get posts request of API with {string} and {string}")
     public void i_have_sent_the_get_posts_request_of_API_with_and(String URL, String command) {
         responsePosts = given().accept(ContentType.JSON)
-                .and().queryParams(queryMap1).log().all()
+                .and().queryParams(queryMap1)
                 .when().get(ConfigurationReader.get(URL) + command);
     }
 
@@ -151,13 +151,12 @@ public class Api_Test {
 
     @When("I search with the {string} as a title")
     public void i_search_with_the_as_a_title(String title) {
-        responsePosts.path("title").toString().contains("qui est esse");
+        responsePosts.path("title").toString().contains(title);
     }
 
-    @Then("The {string} should be given")
-    public void the_should_be_given(String string) {
-      Boolean isTrue=responsePosts.path(string).toString().contains("qui est esse");
-      Assert.assertTrue(isTrue);
+    @Then("The {string} should not not contains the given parameter")
+    public void the_should_not_not_contains_the_given_parameter(String string) {
+        Assert.assertFalse(responsePosts.path(string).toString().contains(string));
     }
     }
 
