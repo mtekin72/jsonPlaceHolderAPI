@@ -39,7 +39,11 @@ public class API {
                 .and().queryParams(queryMap1).log().all()
                 .when().get(baseURL + "/posts");
 
-        // Assert that userId query for userId 9 is true
+
+    System.out.println(responsePosts.path("title").toString().contains("qui est esse")+"cevap burda");
+    System.out.println(responsePosts.path("title").toString());
+
+    // Assert that userId query for userId 9 is true
         Assert.assertEquals(responsePosts.statusCode(), 200);
         Assert.assertEquals(responsePosts.contentType(), "application/json; charset=utf-8");
         Assert.assertTrue(queryMap1.get("userId").equals(idList.get(0)));

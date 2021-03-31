@@ -143,6 +143,21 @@ public class Api_Test {
                 .when().get(ConfigurationReader.get(URL) + command);
 
     }
+    @Given("send get request with parameter {string} and {string}")
+    public void send_get_request_with_parameter_and(String URL, String command) {
+        responsePosts= given().accept(ContentType.JSON)
+                .when().get(ConfigurationReader.get(URL) + command);
+    }
 
+    @When("I search with the {string} as a title")
+    public void i_search_with_the_as_a_title(String title) {
+        responsePosts.path("title").toString().contains("qui est esse");
+    }
+
+    @Then("The {string} should be given")
+    public void the_should_be_given(String string) {
+      Boolean isTrue=responsePosts.path(string).toString().contains("qui est esse");
+      Assert.assertTrue(isTrue);
+    }
     }
 
