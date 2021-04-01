@@ -163,7 +163,7 @@ As a next step, the user email was confirmed that it is a valid email address.
 
 TESTS
 
-Total 4 Test Scenarios were tested. 3 Positive Senarious and 1 Negative senario.
+Total 4 Test Scenarios were tested. 3 Positive Scenarios and 1 Negative senario.
 
 
 Note: First, manual tests were conducted by the help of POSTMAN with possible scenarios to find the bug.
