@@ -134,7 +134,7 @@ Total 10 Posts were retrieved after   Query by Id number and value (userId=9).
 
 Retrieving a list of Posts
 
-Each pos id numbers for user 9 retrieved. By using for loop, each request for
+Each pos id numbers for user (In this example: 9) retrieved. By using for loop, each request for
 every single post ID requests were made.
 
 REQUEST
