@@ -10,7 +10,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
-public class API {
+public class ApiTestNG {
     public static String baseURL = "https://jsonplaceholder.typicode.com";
 
 @Test
