@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-03-31T19:52:28.605Z",
+        "start_timestamp": "2021-04-03T21:47:34.805Z",
         "line": 4,
         "name": "Searching posts by title",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3960257313,
+              "duration": 6227786275,
               "status": "passed"
             },
             "line": 5,
@@ -29,13 +29,13 @@
                   "offset": 46
                 }
               ],
-              "location": "Api_Test.send_get_request_with_parameter_and(String,String)"
+              "location": "ApiTest.send_get_request_with_parameter_and(String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 972866425,
+              "duration": 1361039670,
               "status": "passed"
             },
             "line": 6,
@@ -47,13 +47,13 @@
                   "offset": 18
                 }
               ],
-              "location": "Api_Test.i_search_with_the_as_a_title(String)"
+              "location": "ApiTest.i_search_with_the_as_a_title(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 63322753,
+              "duration": 77313382,
               "status": "passed"
             },
             "line": 7,
@@ -65,7 +65,7 @@
                   "offset": 4
                 }
               ],
-              "location": "Api_Test.the_should_not_not_contains_the_given_parameter(String)"
+              "location": "ApiTest.the_should_not_not_contains_the_given_parameter(String)"
             },
             "keyword": "Then "
           }
@@ -97,7 +97,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-03-31T19:52:33.731Z",
+        "start_timestamp": "2021-04-03T21:47:42.688Z",
         "line": 4,
         "name": "Verify userName Information",
         "description": "",
@@ -107,7 +107,7 @@
         "steps": [
           {
             "result": {
-              "duration": 236303533,
+              "duration": 274768944,
               "status": "passed"
             },
             "line": 5,
@@ -131,13 +131,13 @@
                   "offset": 70
                 }
               ],
-              "location": "Api_Test.send_get_request_with_parameter_and(String,String,String,String)"
+              "location": "ApiTest.send_get_request_with_parameter_and(String,String,String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 56149340,
+              "duration": 80362734,
               "status": "passed"
             },
             "line": 6,
@@ -149,19 +149,19 @@
                   "offset": 26
                 }
               ],
-              "location": "Api_Test.the_status_code_should_be_and_the_information_is_correct(Integer)"
+              "location": "ApiTest.the_status_code_should_be_and_the_information_is_correct(Integer)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 21256627,
+              "duration": 19131703,
               "status": "passed"
             },
             "line": 7,
             "name": "Get the respond Id Information of the user",
             "match": {
-              "location": "Api_Test.get_the_respond_Id_Information_of_the_user()"
+              "location": "ApiTest.get_the_respond_Id_Information_of_the_user()"
             },
             "keyword": "Then "
           }
@@ -173,7 +173,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-03-31T19:52:34.062Z",
+        "start_timestamp": "2021-04-03T21:47:43.090Z",
         "line": 9,
         "name": "Get the valid Id or Ids of the User after get posts request",
         "description": "",
@@ -183,7 +183,7 @@
         "steps": [
           {
             "result": {
-              "duration": 178229683,
+              "duration": 147924073,
               "status": "passed"
             },
             "line": 10,
@@ -199,13 +199,13 @@
                   "offset": 60
                 }
               ],
-              "location": "Api_Test.i_have_sent_the_get_posts_request_of_API_with_and(String,String)"
+              "location": "ApiTest.i_have_sent_the_get_posts_request_of_API_with_and(String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 191593763,
+              "duration": 170458571,
               "status": "passed"
             },
             "line": 11,
@@ -217,13 +217,13 @@
                   "offset": 26
                 }
               ],
-              "location": "Api_Test.the_status_code_should_be_and_the_posts_information_is_correct(int)"
+              "location": "ApiTest.the_status_code_should_be_and_the_posts_information_is_correct(int)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 16965114,
+              "duration": 16304515,
               "status": "passed"
             },
             "line": 12,
@@ -235,19 +235,19 @@
                   "offset": 34
                 }
               ],
-              "location": "Api_Test.i_entered_the_query_parameter_of(String)"
+              "location": "ApiTest.i_entered_the_query_parameter_of(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 654353,
+              "duration": 872793,
               "status": "passed"
             },
             "line": 13,
             "name": "The related posts belong to correct user_Id is listed",
             "match": {
-              "location": "Api_Test.the_related_posts_belong_to_correct_user_Id_is_listed()"
+              "location": "ApiTest.the_related_posts_belong_to_correct_user_Id_is_listed()"
             },
             "keyword": "And "
           }
@@ -259,7 +259,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-03-31T19:52:34.455Z",
+        "start_timestamp": "2021-04-03T21:47:43.430Z",
         "line": 15,
         "name": "Validate the emails",
         "description": "",
@@ -269,7 +269,7 @@
         "steps": [
           {
             "result": {
-              "duration": 152540312,
+              "duration": 228630645,
               "status": "passed"
             },
             "line": 16,
@@ -285,13 +285,13 @@
                   "offset": 63
                 }
               ],
-              "location": "Api_Test.i_have_sent_the_get_comments_request_of_API_with_and(String,String)"
+              "location": "ApiTest.i_have_sent_the_get_comments_request_of_API_with_and(String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 163448392,
+              "duration": 131329807,
               "status": "passed"
             },
             "line": 17,
@@ -303,13 +303,13 @@
                   "offset": 26
                 }
               ],
-              "location": "Api_Test.the_status_code_should_be_and_comments_the_information_is_correct(int)"
+              "location": "ApiTest.the_status_code_should_be_and_comments_the_information_is_correct(int)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 44778331,
+              "duration": 46425682,
               "status": "passed"
             },
             "line": 18,
@@ -321,19 +321,19 @@
                   "offset": 34
                 }
               ],
-              "location": "Api_Test.i_entered_the_query_parameter_of_of_Comments(String)"
+              "location": "ApiTest.i_entered_the_query_parameter_of_of_Comments(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 167933515,
+              "duration": 332373547,
               "status": "passed"
             },
             "line": 19,
             "name": "The email belongs to comments user Id is validated",
             "match": {
-              "location": "Api_Test.the_email_belongs_to_comments_user_Id_is_validated()"
+              "location": "ApiTest.the_email_belongs_to_comments_user_Id_is_validated()"
             },
             "keyword": "And "
           }

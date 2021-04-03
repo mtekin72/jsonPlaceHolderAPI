@@ -24,7 +24,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Api_Test.send_get_request_with_parameter_and(String,String)"
+  "location": "ApiTest.send_get_request_with_parameter_and(String,String)"
 });
 formatter.result({
   "status": "passed"
@@ -34,7 +34,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Api_Test.i_search_with_the_as_a_title(String)"
+  "location": "ApiTest.i_search_with_the_as_a_title(String)"
 });
 formatter.result({
   "status": "passed"
@@ -44,7 +44,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Api_Test.the_should_not_not_contains_the_given_parameter(String)"
+  "location": "ApiTest.the_should_not_not_contains_the_given_parameter(String)"
 });
 formatter.result({
   "status": "passed"
@@ -75,7 +75,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Api_Test.send_get_request_with_parameter_and(String,String,String,String)"
+  "location": "ApiTest.send_get_request_with_parameter_and(String,String,String,String)"
 });
 formatter.result({
   "status": "passed"
@@ -85,7 +85,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Api_Test.the_status_code_should_be_and_the_information_is_correct(Integer)"
+  "location": "ApiTest.the_status_code_should_be_and_the_information_is_correct(Integer)"
 });
 formatter.result({
   "status": "passed"
@@ -95,7 +95,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Api_Test.get_the_respond_Id_Information_of_the_user()"
+  "location": "ApiTest.get_the_respond_Id_Information_of_the_user()"
 });
 formatter.result({
   "status": "passed"
@@ -115,7 +115,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Api_Test.i_have_sent_the_get_posts_request_of_API_with_and(String,String)"
+  "location": "ApiTest.i_have_sent_the_get_posts_request_of_API_with_and(String,String)"
 });
 formatter.result({
   "status": "passed"
@@ -125,7 +125,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Api_Test.the_status_code_should_be_and_the_posts_information_is_correct(int)"
+  "location": "ApiTest.the_status_code_should_be_and_the_posts_information_is_correct(int)"
 });
 formatter.result({
   "status": "passed"
@@ -135,7 +135,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Api_Test.i_entered_the_query_parameter_of(String)"
+  "location": "ApiTest.i_entered_the_query_parameter_of(String)"
 });
 formatter.result({
   "status": "passed"
@@ -145,7 +145,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Api_Test.the_related_posts_belong_to_correct_user_Id_is_listed()"
+  "location": "ApiTest.the_related_posts_belong_to_correct_user_Id_is_listed()"
 });
 formatter.result({
   "status": "passed"
@@ -165,7 +165,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Api_Test.i_have_sent_the_get_comments_request_of_API_with_and(String,String)"
+  "location": "ApiTest.i_have_sent_the_get_comments_request_of_API_with_and(String,String)"
 });
 formatter.result({
   "status": "passed"
@@ -175,7 +175,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Api_Test.the_status_code_should_be_and_comments_the_information_is_correct(int)"
+  "location": "ApiTest.the_status_code_should_be_and_comments_the_information_is_correct(int)"
 });
 formatter.result({
   "status": "passed"
@@ -185,7 +185,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Api_Test.i_entered_the_query_parameter_of_of_Comments(String)"
+  "location": "ApiTest.i_entered_the_query_parameter_of_of_Comments(String)"
 });
 formatter.result({
   "status": "passed"
@@ -195,7 +195,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Api_Test.the_email_belongs_to_comments_user_Id_is_validated()"
+  "location": "ApiTest.the_email_belongs_to_comments_user_Id_is_validated()"
 });
 formatter.result({
   "status": "passed"

@@ -18,6 +18,7 @@ Retrieving a specific username by parameter
 If the request succeeds, the server responds with the 200 OK
 Content Type is JSON ="application/json; charset=utf-8"
 
+``` 
 Status Code: 200 OK
 [
 {
@@ -45,6 +46,7 @@ Status Code: 200 OK
 }
 ]
 
+```
 
 Id number "9" is retrieved and used for another GET request.
 
@@ -57,6 +59,7 @@ RESPONSE
 If the request succeeds, the server responds with the 200 OK
 Content Type is JSON ="application/json; charset=utf-8"
 
+```
 Status Code: 200 OK
 Total 10 Posts were retrieved after   Query by Id number and value (userId=9).
 [
@@ -130,7 +133,7 @@ Total 10 Posts were retrieved after   Query by Id number and value (userId=9).
 "body": "minus omnis soluta quia\nqui olestias praesentium blanditiis"
 }
 ]
-
+```
 
 Retrieving a list of Posts
 
@@ -146,6 +149,7 @@ RESPONSE
 If the request succeeds, the server responds with the 200 OK
 Content Type is JSON ="application/json; charset=utf-8"
 
+```
 Status Code: 200 OK
 [
 {
@@ -156,7 +160,7 @@ Status Code: 200 OK
 "body": "ratione ut magni voluptas\nexplicabo "
 }
 ]
-
+```
 
 As a next step, the user email was confirmed that it is a valid email address.
 

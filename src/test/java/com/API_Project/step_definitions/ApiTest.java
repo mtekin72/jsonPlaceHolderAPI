@@ -8,28 +8,28 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
 
-import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class Api_Test {
+public class ApiTest {
 
     Response responseUserName;
     Response responsePosts;
     Response responseComments;
-    Map<String, Object> queryMap = new HashMap<>();
-    Map<String, Object> queryMap1 = new HashMap<>();
-    Map<String, Object> queryMap2 = new HashMap<>();
+    Map<String, Object> userQueryMap= new HashMap<>();
+    Map<String, Object> postQueryMap = new HashMap<>();
+    Map<String, Object> commentQueryMap = new HashMap<>();
     List<Integer> idList;
     List<Integer> postIdlist;
+    final String eMailPattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
 
 
     public boolean isValidEmailAddress(String email) {
-        String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
-        java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+
+        java.util.regex.Pattern p = java.util.regex.Pattern.compile(eMailPattern );
         java.util.regex.Matcher m = p.matcher(email);
         return m.matches();
     }
@@ -39,9 +39,9 @@ public class Api_Test {
     @Given("send get request with parameter {string}, {string}, {string} and {string}")
     public void send_get_request_with_parameter_and(String username, String name, String URL, String command) {
 
-        queryMap.put(username, name);
+        userQueryMap.put(username, name);
         responseUserName = given().accept(ContentType.JSON)
-                .and().queryParams(queryMap).log().all()
+                .and().queryParams(userQueryMap).log().all()
                 .when().get(ConfigurationReader.get(URL) + command);
     }
 
@@ -49,7 +49,7 @@ public class Api_Test {
     public void the_status_code_should_be_and_the_information_is_correct(Integer int1) {
         Assert.assertEquals(responseUserName.statusCode(), 200);
         Assert.assertEquals(responseUserName.contentType(), "application/json; charset=utf-8");
-        Assert.assertTrue(queryMap.get("username").toString().equals("Delphine"));
+        Assert.assertTrue(userQueryMap.get("username").toString().equals("Delphine"));
         responseUserName.prettyPrint();
     }
 
@@ -58,7 +58,7 @@ public class Api_Test {
         idList=responseUserName.path("id");
 
         //Map format of Posts query for User Id (Id-9)
-        queryMap1.put("userId", idList.get(0));
+        postQueryMap.put("userId", idList.get(0));
     }
 
     @When("I entered the query parameter of  {string}")
@@ -68,7 +68,7 @@ public class Api_Test {
 
     @When("The related posts belong to correct user_Id is listed")
     public void the_related_posts_belong_to_correct_user_Id_is_listed() {
-        queryMap1.put("userId", idList.get(0));
+        postQueryMap.put("userId", idList.get(0));
     }
 
     @When("I entered the query parameter of  {string} of Comments")
@@ -79,11 +79,11 @@ public class Api_Test {
         // Iterating posts Id to get every single comment Id
         for (int i = 0; i < postIdlist.size(); i++) {
 
-            queryMap2.put(id, postIdlist.get(i));
+            commentQueryMap.put(id, postIdlist.get(i));
 
 
             // Assert that posts Id matches with Map query
-            String commentsId = queryMap2.get("id").toString();
+            String commentsId = commentQueryMap.get("id").toString();
             Assert.assertEquals(responseComments.statusCode(), 200);
             Assert.assertTrue(postIdlist.get(i).toString().equals(commentsId));
         }
@@ -108,21 +108,21 @@ public class Api_Test {
 
     @When("The status code should be {int} and the posts information is correct")
     public void the_status_code_should_be_and_the_posts_information_is_correct(int statusCode) {
-        queryMap.put("username", "Delphine");
+        userQueryMap.put("username", "Delphine");
         responseUserName = given().accept(ContentType.JSON)
-                .and().queryParams(queryMap)
+                .and().queryParams(userQueryMap)
                 .when().get(ConfigurationReader.get("baseURL") + "/users");
         idList=responseUserName.path("id");
         Assert.assertEquals(responsePosts.statusCode(), statusCode);
         Assert.assertEquals(responsePosts.contentType(), "application/json; charset=utf-8");
-        queryMap1.put("userId", idList.get(0));
-        Assert.assertTrue(queryMap1.get("userId").equals(idList.get(0)));
+        postQueryMap.put("userId", idList.get(0));
+        Assert.assertTrue(postQueryMap.get("userId").equals(idList.get(0)));
     }
 
     @When("The status code should be {int} and comments the information is correct")
     public void the_status_code_should_be_and_comments_the_information_is_correct(int status_Code) {
         responsePosts = given().accept(ContentType.JSON)
-                .and().queryParams(queryMap1).log().all()
+                .and().queryParams(postQueryMap).log().all()
                 .when().get(ConfigurationReader.get("baseURL") + "/posts");
         Assert.assertEquals(responsePosts.statusCode(), status_Code);
         Assert.assertEquals(responsePosts.contentType(), "application/json; charset=utf-8");
@@ -132,14 +132,14 @@ public class Api_Test {
     @Given("I have sent the get posts request of API with {string} and {string}")
     public void i_have_sent_the_get_posts_request_of_API_with_and(String URL, String command) {
         responsePosts = given().accept(ContentType.JSON)
-                .and().queryParams(queryMap1)
+                .and().queryParams(postQueryMap)
                 .when().get(ConfigurationReader.get(URL) + command);
     }
 
     @Given("I have sent the get comments request of API with {string} and {string}")
     public void i_have_sent_the_get_comments_request_of_API_with_and(String URL, String command) {
         responseComments = given().accept(ContentType.JSON)
-                .and().queryParams(queryMap2)
+                .and().queryParams(commentQueryMap)
                 .when().get(ConfigurationReader.get(URL) + command);
 
     }
