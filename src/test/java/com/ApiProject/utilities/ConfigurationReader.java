@@ -1,4 +1,4 @@
-package com.API_Project.utilities;
+package com.ApiProject.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

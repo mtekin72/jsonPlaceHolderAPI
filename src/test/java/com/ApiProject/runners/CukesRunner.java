@@ -1,4 +1,4 @@
-package com.API_Project.runners;
+package com.ApiProject.runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
                 "html:target/default-html-reports",
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
-        glue = "com/API_Project/step_definitions",
+        glue = "com/ApiProject/stepDefinitions",
         dryRun = false,
         tags = "@Smoke"
 )

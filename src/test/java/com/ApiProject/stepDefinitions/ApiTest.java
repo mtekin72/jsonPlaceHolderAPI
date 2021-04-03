@@ -1,6 +1,6 @@
-package com.API_Project.step_definitions;
+package com.ApiProject.stepDefinitions;
 
-import com.API_Project.utilities.ConfigurationReader;
+import com.ApiProject.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

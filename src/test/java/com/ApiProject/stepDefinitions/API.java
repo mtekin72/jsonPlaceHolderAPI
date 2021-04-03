@@ -1,4 +1,4 @@
-package com.API_Project.step_definitions;
+package com.ApiProject.stepDefinitions;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
