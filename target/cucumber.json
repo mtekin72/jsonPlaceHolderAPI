@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-04-03T23:42:08.222Z",
+        "start_timestamp": "2021-04-07T15:37:38.187Z",
         "line": 4,
         "name": "Searching posts by title",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4886253818,
+              "duration": 4586511034,
               "status": "passed"
             },
             "line": 5,
@@ -35,7 +35,7 @@
           },
           {
             "result": {
-              "duration": 1077166025,
+              "duration": 1013010547,
               "status": "passed"
             },
             "line": 6,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 60139800,
+              "duration": 57851466,
               "status": "passed"
             },
             "line": 7,
@@ -97,7 +97,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-04-03T23:42:14.443Z",
+        "start_timestamp": "2021-04-07T15:37:43.985Z",
         "line": 4,
         "name": "Verify userName Information",
         "description": "",
@@ -107,7 +107,7 @@
         "steps": [
           {
             "result": {
-              "duration": 193940546,
+              "duration": 623639955,
               "status": "passed"
             },
             "line": 5,
@@ -137,7 +137,7 @@
           },
           {
             "result": {
-              "duration": 43140759,
+              "duration": 55529913,
               "status": "passed"
             },
             "line": 6,
@@ -155,7 +155,7 @@
           },
           {
             "result": {
-              "duration": 41385009,
+              "duration": 24265097,
               "status": "passed"
             },
             "line": 7,
@@ -173,7 +173,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-04-03T23:42:14.740Z",
+        "start_timestamp": "2021-04-07T15:37:44.708Z",
         "line": 9,
         "name": "Get the valid Id or Ids of the User after get posts request",
         "description": "",
@@ -183,7 +183,7 @@
         "steps": [
           {
             "result": {
-              "duration": 183446145,
+              "duration": 181362277,
               "status": "passed"
             },
             "line": 10,
@@ -205,7 +205,7 @@
           },
           {
             "result": {
-              "duration": 136017193,
+              "duration": 205271469,
               "status": "passed"
             },
             "line": 11,
@@ -223,7 +223,7 @@
           },
           {
             "result": {
-              "duration": 15682327,
+              "duration": 26152936,
               "status": "passed"
             },
             "line": 12,
@@ -241,7 +241,7 @@
           },
           {
             "result": {
-              "duration": 1113993,
+              "duration": 976941,
               "status": "passed"
             },
             "line": 13,
@@ -259,7 +259,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-04-03T23:42:15.098Z",
+        "start_timestamp": "2021-04-07T15:37:45.127Z",
         "line": 15,
         "name": "Validate the emails",
         "description": "",
@@ -269,7 +269,7 @@
         "steps": [
           {
             "result": {
-              "duration": 140373374,
+              "duration": 261877419,
               "status": "passed"
             },
             "line": 16,
@@ -291,7 +291,7 @@
           },
           {
             "result": {
-              "duration": 132801994,
+              "duration": 148882467,
               "status": "passed"
             },
             "line": 17,
@@ -309,7 +309,7 @@
           },
           {
             "result": {
-              "duration": 42921904,
+              "duration": 45122090,
               "status": "passed"
             },
             "line": 18,
@@ -327,7 +327,7 @@
           },
           {
             "result": {
-              "duration": 221799492,
+              "duration": 254238355,
               "status": "passed"
             },
             "line": 19,
